@@ -1,0 +1,26 @@
+# Main application configuration file
+
+routes:
+  news_view:
+    pattern: '/^\/news\/(\d+)\/?$/'
+    args:
+      controller:
+        default: 'news'
+      action: 
+        default: 'view'
+      id:
+        default: 0
+        ref: 1
+  test_route:
+    pattern: '/^\/mytest2\/?$/'
+    args:
+      controller:
+        default: 'index'
+      action:
+        default: 'index'
+        
+db:
+  adapter: 'mysql'
+  user: 'root'
+  password: ''
+  db_name: 'app'
